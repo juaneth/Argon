@@ -1,0 +1,13 @@
+body,
+html {
+    overflow-x: hidden;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: rgb(89, 0, 255);
+    background: linear-gradient(10deg, rgba(89, 0, 255, 1) 25%, rgba(184, 0, 255, 1) 100%) fixed;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
