@@ -11,6 +11,8 @@ const createWindow = () => {
     const mainWindow = new BrowserWindow({
         width: 450,
         height: 700,
+        title: "Argon Client",
+        icon: path.join(__dirname, 'icon.ico'),
         minWidth: 380,
         minHeight: 620,
         webPreferences: {
@@ -22,7 +24,7 @@ const createWindow = () => {
     mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
     // Open the DevTools.
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
