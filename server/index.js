@@ -5,24 +5,25 @@ const app = express()
 const port = 1455
 
 //generate userid with specified username
-function generateuserid(username) {
-    const uuid = require('uuid')
+function generateuserid() {
+    const { v4: uuidv4 } = require('uuid');
 
+    let userid = uuidv4()
+
+    return userid
 }
 
 app.get('/create-acc', (req, res) => {
     let username = req.query.username
 
-    //generate a user id for account name
-    generateuserid(username);
+    //generate a user id for account
+    const useridgenerated = generateuserid();
 
-    let userid =
-
-        res.json({
-            "success": "Account was created for user",
-            "username": `@${username}`,
-            "userid": `1`
-        })
+    res.json({
+        "success": "Account was created for user",
+        "username": `@${username}`,
+        "userid": `${useridgenerated}`
+    })
 });
 
 app.listen(port, () =>
