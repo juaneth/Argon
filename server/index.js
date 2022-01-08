@@ -1,6 +1,29 @@
 const express = require('express')
 const password = require('generate-password')
 
+const fs = require('fs')
+
+function log(content) {
+    console.log(content)
+
+    let prev = fs.readFileSync('log.txt', 'utf-8')
+}
+
+function database(action, content) {
+    //Save User to Database
+    if (action == undefined || content == undefined) {
+        log('Undefined action or content for Database')
+    } else {
+        if (action == "create-user") {
+
+        }
+
+        if (action == "") {
+
+        }
+    }
+}
+
 const app = express()
 
 const port = 1455
@@ -19,6 +42,8 @@ app.get('/create-acc', (req, res) => {
 
     //generate a user id for account
     const useridgenerated = generateuserid();
+
+    database("create-user", "")
 
     res.json({
         "success": "Account was created for user",

@@ -11,6 +11,7 @@ let child = exec(`npx electron-packager . Argon --all --icon "src/icon" --overwr
         console.log(`stderr: ${stderr}`);
         return;
     }
+
     console.log(`stdout: ${stdout}`);
 });
 
