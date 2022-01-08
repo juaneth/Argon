@@ -1,7 +1,31 @@
 const fs = require('fs')
 
-//Create logins folder for login info
-fs.mkdirSync('userdata/logins')
+console.log('By running this script you agree to our terms of use defined here: https://github.com/juaneth/Argon and once script is run all userdata will be cleared if there were previously. \n\n')
 
-//Write users.json to store user info
-fs.writeFileSync('userdata/users.json', '{}')
+const prompts = require('prompts');
+
+(async() => {
+    const response = await prompts({
+        type: 'text',
+        name: 'value',
+        message: 'Y/N?',
+    });
+
+    if (response.value == 'y' || response.value == 'Y' || response.value == 'yes' || response.value == 'YES') {
+        //Create logins folder for login info
+        try {
+            fs.mkdirSync('userdata/logins')
+        } catch {
+            console.log('./userdata and ./userdata/logins both already exist - Skipping')
+        }
+
+        //Write users.json to store user info
+        try {
+            fs.writeFileSync('userdata/users.json', '{}')
+        } catch {
+            console.log('./userdata/users.json already exists - Skipping')
+        }
+    } else {
+        console.log('\n\nExiting...')
+    }
+})();

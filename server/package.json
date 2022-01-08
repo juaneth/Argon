@@ -7,12 +7,12 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "setup": "node setup.js"
     },
-
     "author": "",
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.2",
         "generate-password": "^1.7.0",
+        "prompts": "^2.4.2",
         "uuid": "^8.3.2"
     }
 }
