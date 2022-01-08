@@ -4,4 +4,6 @@ On client we could store a client generated hash of the invite, we could then de
 
 https and nodejs maybe arent the best for a databse??
 
-I could go the normal way with a "username" and "password", username being invite used to create account and password... a password created upon account creation
+I could go the normal way with a "username" and "password", username being invite used to create account and password... a password created upon account creation.
+
+https://www.npmjs.com/package/bcrypt encrypt with this and then also have https stuffs
