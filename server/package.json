@@ -1,16 +1,18 @@
 {
-  "name": "argon-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.2",
-    "generate-password": "^1.7.0",
-    "uuid": "^8.3.2"
-  }
+    "name": "argon-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "setup": "node setup.js"
+    },
+
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.2",
+        "generate-password": "^1.7.0",
+        "uuid": "^8.3.2"
+    }
 }
