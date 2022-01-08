@@ -69,5 +69,5 @@ app.get('/create-inv', (req, res) => {
 });
 
 app.listen(port, () =>
-    console.log(`Argon API listening on port ${port}!`),
+    console.log(`Argon API listening on port ${port}! TEST:http://localhost:${port}/create-acc?username=TEST`),
 );
