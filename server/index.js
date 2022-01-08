@@ -1,4 +1,5 @@
 const express = require('express')
+const password = require('generate-password')
 
 const app = express()
 
@@ -23,6 +24,22 @@ app.get('/create-acc', (req, res) => {
         "success": "Account was created for user",
         "username": `@${username}`,
         "userid": `${useridgenerated}`
+    })
+});
+
+app.get('/create-inv', (req, res) => {
+    let username = req.query.username
+
+    //Generate passkey
+    let passkey = password.generate({
+        length: 12,
+        numbers: false
+    });
+
+    res.json({
+        "success": "Invite was created for user",
+        "author": `@${username}`,
+        "invite-key": `inv-${passkey}`
     })
 });
 

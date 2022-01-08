@@ -14,8 +14,8 @@ let child = exec(`npx electron-packager . Argon --all --icon "src/icon" --overwr
     console.log(`stdout: ${stdout}`);
 });
 
-child.on('exit', function() {
-    console.log('Build Complete, Packaging... \n');
+child.on('close', function() {
+    console.log(' -------- Build Complete, Packaging... --------\n');
 
     fs.readdirSync('./out').forEach(file => {
         console.log(`Platform: ${file}`)
@@ -23,7 +23,7 @@ child.on('exit', function() {
         if (file == '.DS_Store') {
             console.log(`${file} Ignored, -> .DS_Store`)
         } else {
-            var zip = new adm_zip();
+            let zip = new adm_zip();
 
             zip.addLocalFolder(`./out/${file}`);
 
