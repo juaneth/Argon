@@ -47,12 +47,8 @@ app.get('/create-acc', (req, res) => {
 
     res.json({
         "success": "Account was created for user",
-        "username": `
-                @$ { username }
-                `,
-        "userid": `
-                $ { useridgenerated }
-                `
+        "username": `@${username}`,
+        "userid": `${useridgenerated}`
     })
 });
 
@@ -67,16 +63,11 @@ app.get('/create-inv', (req, res) => {
 
     res.json({
         "success": "Invite was created for user",
-        "author": `
-                @$ { username }
-                `,
-        "invite-key": `
-                inv - $ { passkey }
-                `
+        "author": `@${username}`,
+        "invite-key": `inv - ${passkey}`
     })
 });
 
 app.listen(port, () =>
-    console.log(`
-                Argon API listening on port $ { port }!TEST: http: //localhost:${port}/create-acc?username=TEST`),
+    console.log(`Argon API listening on port $ { port }!TEST: http: //localhost:${port}/create-acc?username=TEST`),
 );
