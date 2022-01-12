@@ -64,10 +64,10 @@ app.get('/create-inv', (req, res) => {
     res.json({
         "success": "Invite was created for user",
         "author": `@${username}`,
-        "invite-key": `inv - ${passkey}`
+        "invite-key": `inv-${passkey}`
     })
 });
 
 app.listen(port, () =>
-    console.log(`Argon API listening on port $ { port }!TEST: http: //localhost:${port}/create-acc?username=TEST`),
+    console.log(`Argon API listening on port ${port}! TEST: http://localhost:${port}/create-inv?username=TEST`),
 );
