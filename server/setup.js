@@ -25,6 +25,12 @@ const prompts = require('prompts');
         } catch {
             console.log('./userdata/users.json already exists - Skipping')
         }
+
+        try {
+            fs.writeFileSync('userdata/invites.json', '{}')
+        } catch {
+            console.log('./userdata/invites.json already exists - Skipping')
+        }
     } else {
         console.log('\n\nExiting...')
     }

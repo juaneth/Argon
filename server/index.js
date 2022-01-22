@@ -10,6 +10,14 @@ function log(content) {
 }
 
 function database(action, content) {
+    function save(where, what) {
+        fs.writeFile("./userdata/invites.json", jsonData, function(err) {
+            if (err) {
+                console.log(err);
+            }
+        });
+    }
+
     //Save User to Database
     if (action == undefined || content == undefined) {
         log('Undefined action or content for Database')
@@ -18,7 +26,11 @@ function database(action, content) {
 
         }
 
-        if (action == "") {
+        if (action == "login") {
+
+        }
+
+        if (action == "invite") {
 
         }
     }
@@ -53,6 +65,22 @@ app.get('/create-acc', (req, res) => {
 });
 
 app.get('/create-inv', (req, res) => {
+    let username = req.query.username
+
+    //Generate passkey
+    let passkey = password.generate({
+        length: 12,
+        numbers: false
+    });
+
+    res.json({
+        "success": "Invite was created for user",
+        "author": `@${username}`,
+        "invite-key": `inv-${passkey}`
+    })
+});
+
+app.get('/login', (req, res) => {
     let username = req.query.username
 
     //Generate passkey
