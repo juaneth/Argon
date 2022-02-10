@@ -7,4 +7,4 @@ Argon is an invite-only service and to create an account you will need an invite
 
 # Privacy
 
-Argon is based on a 'as little as possible' way off collecting data, it means we only collect data that is vital to our platforms functions like account details and data you share with us (All data collection is off by default)
+Argon is based on a 'as little as possible' way off collecting data, it means we only collect data that is vital to our platforms functions (Eg. account details) and data you share with us (Data collection is off by default)
