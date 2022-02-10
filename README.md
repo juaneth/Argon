@@ -8,3 +8,7 @@ Argon is an invite-only service and to create an account you will need an invite
 # Privacy
 
 Argon is based on a 'as little as possible' way off collecting data, it means we only collect data that is vital to our platforms functions (Eg. account details) and data you share with us (Data collection is off by default)
+
+# Advertising
+
+We do not advertise on our platform currently, although we may change this policy in the future we currently think things like Google Adsense and other advertising platforms are not the way open technoligies should monetize their platforms and we do not currently have the resources to impliment them ourselves.
