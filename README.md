@@ -1,6 +1,6 @@
 # Argon
 
-### Argon is a privacy focused social network built for people wh o value their privacy but still want connection
+### Argon is a privacy focused social network built for people who value their privacy but still want connection
 
 We believe that privacy is a basic human right, even on the internet, and companies (Such as Google and Facebook) collect data on your gender, location, what foods you like, whether or not you are in a relationship and a lot more, way too much. We think that's absurd and needs to change. That's why we are trying to make a new standard for the internet to not rely on data collection that violates our human rights to profit.
 
