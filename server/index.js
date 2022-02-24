@@ -1,12 +1,15 @@
 const express = require('express')
 const password = require('generate-password')
 
+// 'npm i' to install all packages
+
 const fs = require('fs')
 
 function log(content) {
     console.log(content)
 
     let prev = fs.readFileSync('log.txt', 'utf-8')
+    fs.writeFileSync()
 }
 
 function database(action, content) {
